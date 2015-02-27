@@ -10,6 +10,8 @@ import org.springframework.boot.test.SpringApplicationConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.test.context.web.WebAppConfiguration;
 
+import java.io.*;
+
 import static com.jayway.restassured.RestAssured.given;
 import static com.jayway.restassured.RestAssured.when;
 import static org.hamcrest.CoreMatchers.is;
@@ -44,4 +46,12 @@ public class HelloControllerTest {
                 .body("right", is(200))
                 .body("answer", is(300));
     }
+
+//    @Test
+//    public void testCSVParsing() throws Exception {
+//        InputStream is = new FileInputStream(new File("schedules.txt"));
+//        BufferedReader br = new BufferedReader(new InputStreamReader(is));
+//
+//
+//    }
 }
